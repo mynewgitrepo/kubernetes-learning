@@ -18,7 +18,7 @@ pipeline {
             steps {           
                         sh 'pwd'
                         sh 'helm list'
-                        sh 'helm upgrade --install mygetting-started-app /home/azureuser/my-learning/getting-started  --set image.repository=shivangiacr210.azurecr.io/getting-started --set image.tag=14'		        		
+                        sh 'helm upgrade --install mygetting-started-app /home/azureuser/my-learning/getting-started  --set image.repository=shivangiacr210.azurecr.io/getting-started --set image.tag=16'		        		
             }           
         }
     }
