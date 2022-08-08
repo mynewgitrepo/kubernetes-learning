@@ -7,7 +7,7 @@ pipeline {
            steps {
                script {         
                  def customImage = docker.build('shivangiacr210.azurecr.io/getting-started', ".")
-                 docker.withRegistry('shivangiacr210.azurecr.io', 'acr-demo') {
+                 docker.withRegistry('https://shivangiacr210.azurecr.io', 'acr-demo') {
                  customImage.push("${env.BUILD_NUMBER}")
                  }                     
            }
