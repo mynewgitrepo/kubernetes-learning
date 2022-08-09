@@ -1,7 +1,4 @@
-pipeline {
-  agent any
-    
-    stages {      
+node {
         
         
 
@@ -17,4 +14,4 @@ pipeline {
   }
 
     }
-}
+
