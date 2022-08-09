@@ -1,11 +1,10 @@
-def scannerHome =  tool 'sonarqube';
 pipeline {
   agent any
   stages {      
         
    stage('SonarQube analysis') {
     steps{
-    
+    def scannerHome =  tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
       sh "${scannerHome}/bin/sonar-scanner \
       -D sonar.login=admin \
