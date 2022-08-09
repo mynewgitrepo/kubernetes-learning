@@ -9,7 +9,7 @@ node {
       -D sonar.login=admin \
       -D sonar.password=admin \
       -D sonar.projectKey=test \
-      -D sonar.host.url=http://20.124.22.207/"
+      -D sonar.host.url=http://20.124.22.207:9000/"
     }
   }
 
