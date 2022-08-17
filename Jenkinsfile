@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('chechout') { 
             steps {
-                sh 'pwd' 
+                git 'https://github.com/mynewgitrepo/kubernetes-learning.git' 
             }
         }
         stage('Test') { 
