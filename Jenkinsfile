@@ -22,7 +22,7 @@ pipeline {
                script {         
                  def customImage = docker.build('shivangiacr210.azurecr.io/getting-started', ".")
                  docker.withRegistry('https://shivangiacr210.azurecr.io', 'acr-demo') {
-                 customImage.push("${env.BUILD_NUMBER}")
+                 customImage.push("dev")
                  }                     
            }
         }
@@ -33,7 +33,7 @@ pipeline {
             steps {           
                         sh 'pwd'
                         sh 'helm list'
-                        sh 'helm upgrade --install mygetting-started-app /home/azureuser/my-learning/getting-started  --set image.repository=shivangiacr210.azurecr.io/getting-started --set image.tag=${env.BUILD_NUMBER}'		        		
+                        sh 'helm upgrade --install mygetting-started-app /home/azureuser/my-learning/getting-started  --set image.repository=shivangiacr210.azurecr.io/getting-started --set image.tag=dev'		        		
             }           
         }
     }
